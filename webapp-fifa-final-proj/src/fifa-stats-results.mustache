@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Result</title>
+    <link type="text/css" rel="stylesheet" href="table.css" />
+  </head>
+  <style>
+      div {text-align: center;}
+      table {opacity:0.85}
+
+  </style>
+  <body>
+    <div style="float:left;margin-left:38%;margin-right:auto;display:inline-block;box-shadow: 10px 10px 5px #888888;border:1px solid #000000;-moz-border-radius-bottomleft:9px;
+    -webkit-border-bottom-left-radius:9px;border-bottom-left-radius:9px;-moz-border-radius-bottomright:9px;-webkit-border-bottom-right-radius:9px;border-bottom-right-radius:9px;
+    -moz-border-radius-topright:9px;-webkit-border-top-right-radius:9px;border-top-right-radius:9px;-moz-border-radius-topleft:9px;-webkit-border-top-left-radius:9px;
+    border-top-left-radius:9px;background:white;opacity:0.75;">
+     &nbsp;<b>FIFA stats for <u>{{team}}</u>
+          <br> *all stats are averages for players unless specified</b>&nbsp;
+
+    </div>
+    <br>
+    <p style="bottom-margin:10px">
+      <table class="CSS_Table_Example" style="width:60%;margin:auto;">
+	<tr><th>Year</th><td>Game Ver</td><td># in Team</td><td>Ovr</td><td>Pot</td><td>Pac</td><td>Sho</td><td>Pas</td><td>Dri</td>
+        <td>Def</td><td>Phy</td><td>Country Rank</td><td>Wages</td><td># Euro</td><td># Asia</td><td># N.Ame</td><td># S.Ame</td><td># Afr</td><td># Oce</td></tr>
+        {{#teamInfo}}
+	<tr><td><b>{{year}}</b></td><td>{{fifa_version}}</td><td>{{num_players}}</td><td>{{overall_ratings}}</td><td>{{potential_ratings}}</td><td>{{pace_ratings}}</td><td>{{shooting_ratings}}</td><td>{{passing_ratings}}</td>
+	  <td>{{dribbling_ratings}}</td><td>{{defending_ratings}}</td><td>{{physical_ratings}}</td><td>{{country_ratings}}</td>
+        <td>{{wages_money}}</td><td>{{european_players}}</td><td>{{asian_players}}</td>
+        <td>{{namerican_players}}</td><td>{{samerican_players}}</td><td>{{african_players}}</td><<td>{{oceania_players}}</td>/tr>
+        {{/teamInfo}}
+    </table>
+    <br>
+    <div style="margin-left:40%;margin-right:auto;display:inline-block;box-shadow: 10px 10px 5px #888888;border:1px solid #000000;-moz-border-radius-bottomleft:9px;
+    -webkit-border-bottom-left-radius:9px;border-bottom-left-radius:9px;-moz-border-radius-bottomright:9px;-webkit-border-bottom-right-radius:9px;border-bottom-right-radius:9px;
+    -moz-border-radius-topright:9px;-webkit-border-top-right-radius:9px;border-top-right-radius:9px;-moz-border-radius-topleft:9px;-webkit-border-top-left-radius:9px;
+    border-top-left-radius:9px;background:white;opacity:0.9;font-size:13;">
+        <h3>LEGEND:</h3> <b># of team:</b> number of players in team
+        <br> <b>Ovr:</b> average overall ratings
+        <br> <b>Pot:</b> average potential ratings
+        <br> <b>Pac:</b> average pace ratings
+        <br> <b>Sho:</b> average shooting ratings
+        <br> <b>Pas:</b> average passing ratings
+        <br> <b>Dri:</b> average dribbling ratings
+        <br> <b>Def:</b> average defending ratings
+        <br> <b>Phy:</b> average physical ratings
+        <br> <b>Country Rank:</b> average FIFA ranking of players
+        <br> <b>Wages:</b> Average wage ($,000s)
+        <br> <b># Euro:</b> number of European players
+        <br> <b>#Asia:</b> total Asian players
+        <br> <b>#N.Ame:</b> total N.American players
+        <br> <b>#S.Ame:</b> total S.American players
+        <br> <b>#Afr:</b> total African players
+        <br> <b>#Oce:</b> number of Oceanic players
+        <br>
+        <br>
+    </div>
+
+
+</body></html>

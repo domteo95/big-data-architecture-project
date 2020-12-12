@@ -1,0 +1,3 @@
+# SPARK SUBMIT FOR SPEED LAYER UBER JAR FOUND IN dominicteo/final-proj-speed-layer/target
+
+spark-submit --master local[2] --driver-java-options "-Dlog4j.configuration=file:///home/hadoop/ss.log4j.properties" --class StreamPlayers uber-final-proj-speed-layer-1.0-SNAPSHOT.jar b-2.mpcs53014-kafka.fwx2ly.c4.kafka.us-east-2.amazonaws.com:9092,b-1.mpcs53014-kafka.fwx2ly.c4.kafka.us-east-2.amazonaws.com:9092 

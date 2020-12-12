@@ -1,0 +1,38 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /src
+    destination: /home/ec2-user/dominicteo/final_proj_v3
+    
+permissions:
+  - object: /home/ec2-user/dominicteo/final_proj_v3/
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+
+  - object: /home/ec2-user/dominicteo/
+    pattern: "final_proj_v3"
+    owner: ec2-user
+    group: ec2-user
+    type:
+      - directory
+
+hooks:
+  ApplicationStop:
+    - location: bin/application_stop.sh
+      timeout: 120
+      runas: ec2-user
+  BeforeInstall:
+    - location: bin/before_install.sh
+      timeout: 120
+      runas: ec2-user
+  AfterInstall:
+    - location: bin/after_install.sh
+      timeout: 1200
+      runas: ec2-user
+  ApplicationStart:
+    - location: bin/application_start.sh
+      timeout: 120
+      runas: ec2-user
+

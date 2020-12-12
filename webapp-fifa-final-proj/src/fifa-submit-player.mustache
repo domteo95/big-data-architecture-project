@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Submit New Player</title>
+    <link type="text/css" rel="stylesheet" href="elegant-aero.css" />
+      <style>
+          input::-webkit-calendar-picker-indicator {
+              display: none;/* remove default arrow */
+          }
+          .myarrow:after {
+              content: url(https://i.stack.imgur.com/i9WFO.png);
+              margin-left: -20px;
+              padding: .1em;
+              pointer-events:none;
+          }
+      </style>
+      <script>
+          <!-- https://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using -->
+          function resizeIframe(obj) {
+              obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+          }
+      </script>
+  </head>
+  <body style='background-image:URL("fifa-cover.jpg");background-repeat:no-repeat;background-position:center top;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;'>
+    <p style="margin-bottom:2cm"/>
+    <form action="/new-player.html" style="width:600px;height:auto;margin:0 auto;padding-top=200px;background:#FFFFFF" method="get" target="results_iframe" class="elegant-aero">
+
+        <br><h1> Submit a New Player</h1>
+        <label>
+            <span class="myarrow">
+                <span>Team:</span>
+                <input list="teams" name="team"/>
+                <datalist id="teams">
+                    {{#teams}}
+                    <option value="{{key}}">
+                    {{/teams}}
+                </datalist></span>
+            <b>Year:</b> <input type="text" name="year" value="2020" maxlength="4" style="width: 50px"/></label>
+
+
+        <label style="font-weight: normal;color:#5E5E5E">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;  <b>Nationality</b> &nbsp; Europe <input type="checkbox" name="european" value="1"/>
+          Africa <input type="checkbox" name="african" value="1"/>
+          Asia <input type="checkbox" name="asian" value="1"/>
+          NAmerica <input type="checkbox" name="namerican" value="1"/>
+          SAmerica <input type="checkbox" name="samerican" value="1"/>
+          Oceania <input type="checkbox" name="oceania" value="1"/></label>
+        <br>
+
+        <label>
+            &nbsp; &nbsp;&nbsp; &nbsp;Overall Ratings: <input type="text" name="overall" value="0" maxlength="3" style="width: 30px"/>
+            Potential Ratings: <input type="text" name="potential" value="0" maxlength="3" style="width: 30px"/>
+            Pace Ratings: <input type="text" name="pace" value="0"maxlength="3" style="width: 30px"/></label>
+        <label>
+            &nbsp; &nbsp; &nbsp;&nbsp;Shooting Ratings: <input type="text" name="shooting" value="0" maxlength="3" style="width: 30px"/>
+            Passing Ratings: <input type="text" name="passing" value="0" maxlength="3" style="width: 30px"/>
+            Physical Ratings: <input type="text" name="physical" value="0" maxlength="3" style="width: 30px"/></label>
+        <label>
+            &nbsp; &nbsp; &nbsp;&nbsp;Dribbling Ratings: <input type="text" name="dribbling" value="0" maxlength="3" style="width: 30px"/>
+            Defending Ratings: <input type="text" name="defending" value="0" maxlength="3" style="width: 30px"/></label>
+
+        <label>
+            &nbsp; &nbsp; &nbsp;&nbsp;Player Wages ($,000s): <input type="text" name="wages" value="0" maxlength="3" style="width: 30px"/>
+            Country Ranking: <input type="text" name="country" value="0" maxlength="3" style="width: 30px"/></label>
+
+        <label>
+            <span>&nbsp;</span><input type="submit" value="Submit" onclick="window.location.href=window.location.href">
+        </label>
+
+
+        <br>
+      </div>
+    </form>
+    <p style="margin-bottom:2cm"/>
+
+    <iframe frameBorder="0" onload="resizeIframe(this)" name="results_iframe" style="display:block;width:70%;margin-left:auto;margin-right:auto"/>
+
+  </body>
+</html>

@@ -9,6 +9,10 @@
 
 An extensive list of all files containing code to create Hive, Hbase tables and their names as well, locations in my S3 bucket containing my web app deployment and HDFS location for jars used can be found  as well as commands to deploy the speed layer can be found in the **Appendix** located at the end of this ReadMe.  
 
+<p align="center">
+  <img src="https://github.com/domteo95/big-data-architecture-project/blob/main/screenshots/overview.gif"/>
+</p>
+
 ## Lambda Architecture
 
 This project utilizes the famous lambda architecture that "provides comprehensive and accurate views of batch data, while simultaneously using real-time (manually added for this project) stream processing that updates batch data. There are 3 layers in this big data architecture - **batch Layer** which in this case will precompute average stats for each football team in the FIFA game, **speed layer** which will be manually created through a 'submit-player' form and the **serving layer** which stores output from the batch and speed layer and provides us with the updated average stats.

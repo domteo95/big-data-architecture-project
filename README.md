@@ -49,7 +49,7 @@ With my deployed web application, football fans are able to search for any footb
 * Number of Oceanic Players (# Oce)
 
 
-<img src="https://github.com/domteo95/Projects/blob/master/Big%20Data%20Architecture%20Project%20/Big%20Data%20FIFA%20Project/screenshots/example-stats-page.png" alt="Figure 1, serving layer"/>
+<img src="https://github.com/domteo95/big-data-architecture-project/tree/main/screenshots/example-stats-page.png" alt="Figure 1, serving layer"/>
 
 *An example of choosing the football team 'Manchester United'*
 
@@ -66,7 +66,7 @@ The data used in this project comes from two sources.
 
 2. Players data: Stats for each player in every FIFA game from FIFA 07 (2006) to FIFA 21 (2020). Data is scrapped from the [SoFIFA](https://sofifa.com/) website. The data on players will later be grouped by team and year. 
 
-<img src="https://github.com/domteo95/Projects/blob/master/Big%20Data%20Architecture%20Project%20/Big%20Data%20FIFA%20Project/screenshots/sofifa.png" alt="sofifa"/>
+<img src="https://github.com/domteo95/big-data-architecture-project/tree/main/screenshots/sofifa.png" alt="sofifa"/>
 
 *List of players and their stats on the SoFIFA website for FIFA 21*
 
@@ -227,16 +227,16 @@ The files used in the creation of the web app that was deployed can be found in 
 
 The main landing page page `fifa-stats-teams.html` where we are able to choose what team we're searching for is created by the `fifa-teams-unique.mustache` file and can be seen below.
 
-<img src="https://github.com/domteo95/Projects/blob/master/Big%20Data%20Architecture%20Project%20/Big%20Data%20FIFA%20Project/screenshots/example-main-page.png" alt="main page"/>
+<img src="https://github.com/domteo95/big-data-architecture-project/tree/main/screenshots/example-main-page.png" alt="main page"/>
 
 The results after choosing a team is created by the `fifa-stats-results.mustache` file. The results are displayed in a table and every row represents the teams' stats for every year that the team appears in FIFA 07 to FIFA 21. Not every team appears in every edition of FIFA 07 to FIFA 21 as FIFA only contains teams from some leagues. Hence, if a team is relegated from that league to a lower league, it may no longer appear in that year's edition of FIFA and vice versa if a team gets promoted from a lower league (doesn't appear in FIFA) to a higher level league (appears in FIFA). 
 
-<img src="https://github.com/domteo95/Projects/blob/master/Big%20Data%20Architecture%20Project%20/Big%20Data%20FIFA%20Project/screenshots/example-inter-miami.png" alt="Figure 1, serving layer as beziers"/>
+<img src="https://github.com/domteo95/big-data-architecture-project/tree/main/screenshots/example-inter-miami.png" alt="Figure 1, serving layer as beziers"/>
 
 *An example would be the team AS Béziers, a French football team that was promoted to the professional leagues in 2018.*
 
 
-<img src="https://github.com/domteo95/Projects/blob/master/Big%20Data%20Architecture%20Project%20/Big%20Data%20FIFA%20Project/screenshots/example-inter-miami.png" alt="Figure 1, serving layer inter miami"/>
+<img src="https://github.com/domteo95/big-data-architecture-project/tree/main/screenshots/example-inter-miami.png" alt="Figure 1, serving layer inter miami"/>
 
 *Other teams are also newly created, for example, the team Inter Miami from the American MLS league was recently created in 2020 as seen below.*
 
@@ -263,7 +263,7 @@ The name of this Hbase table is `dominicteo_hbase_proj_team_v2` and will be used
 
 Users are able to add new players in the `submit-player.html` by filling in the categories shown below
 
-<img src="https://github.com/domteo95/Projects/blob/master/Big%20Data%20Architecture%20Project%20/Big%20Data%20FIFA%20Project/screenshots/submit-player-page.png" alt="submit new player"/>
+<img src="https://github.com/domteo95/big-data-architecture-project/tree/main/screenshots/submit-player-page.png" alt="submit new player"/>
 
 The uber jar containing the scala files which defines the KafkaPlayerRecord class and the StreamPlayers object can be found in HDFS. The uber jar is titled `uber-final-proj-speed-layer-1.0-SNAPSHOT.jar` and can be found at `dominicteo/final-proj-speed-layer/target`. 
 
